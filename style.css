@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Poppins:wght@200&display=swap');
+/* 폰트 두 개 import 되어있음 */
+*{
+  margin: 0;
+  padding :0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  min-height: 100vh;
+  background: #f7f7f7;   
+}
+.wrapper{
+  background: #fff;
+  width: 450px;
+  border-radius: 16px; 
+  /* 경계 둥글게 만들어줌 */
+  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
+
+}
