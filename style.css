@@ -19,6 +19,187 @@ body{
   width: 450px;
   border-radius: 16px; 
   /* 경계 둥글게 만들어줌 */
-  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5); 
+  /* 박스 그림자 설정 */
+}
 
+
+/*signup Form CSS Code  */
+.form{
+  /* form으로 시작하는 class에 적용? */
+  padding : 25px 30px;
+}
+.form header{
+  font-size:  25px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.form form{
+  /* form으로 시작하는 class에 있는 form태그 */
+  margin:  20px 0;
+}
+.form form .error-txt{
+  color: #721c72;
+  background: #f8d7da;
+  padding: 8px 10px;
+  text-align: center;
+  border-radius:  5px;
+  margin-bottom: 10px;
+  border: 1px solid #f5c6cb;
+
+}
+.form form .field{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.form form .input input{
+  outline: none;
+}
+.form form .input input{
+  /* input이란 클래스의 input태그 */
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form form .image input{
+  font-size: 17px;
+}
+.form form .button input{
+  margin-top: 13px;
+  height: 45px;
+  border: none;
+  font-size: 17px;
+  font-weight: 400;
+  background: rgb(66, 66, 66);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.form .link{
+  text-align: center;
+  margin: 10px 0;
+  font-size: 17px;
+}
+.form .link a{
+  color: rgb(59, 62, 245);
+}
+.form .link a:hover{
+  /* 마우스 커서 갖다대면 밑줄 효과 */
+  text-decoration: underline;
+}
+
+/* user Area CSS Code */
+.users{
+  padding: 25px 30px;
+}
+.users header,
+.user-list a{
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid #e6e6e6;
+}
+.wrapper img{
+  object-fit: cover;
+  border-radius: 50%;
+}
+:is(.users,.user-list) .content{
+  display: flex;
+  align-content: center;
+}
+/* 
+위랑 같은 뜻
+.users header .content,
+.user-list a .content{
+  display: flex;
+} */
+.users header .content img{
+  height: 50px;
+  width: 50px;
+}
+:is(.users,.user-list) .details{
+  color: #000;
+  margin-left: 15px;
+}
+:is(.users,.user-list) .details span{
+  font-size: 18px;
+  font-weight: 700;
+}
+.users header .logout{
+  color: #fff;
+  font-size: 17px;
+  padding: 7px 15px;
+  background: #333;
+  border-radius: 5px;
+}
+.users .search{
+  margin: 20px 0;
+  display: flex;
+  position: relative; 
+  /* 위치 relative 꼭 해줘야함,,, 창 비율에 맞게 포지션해줌 */
+  align-items: center;
+  justify-content: space-between; 
+}
+.users .search .text{
+  font-size: 18px;
+}
+.users .search input{
+  position: absolute;
+  height: 42px;
+  width: calc(100% - 50px);
+  border: 1px solid #ccc;
+  padding: 0 13px;
+  font-size: 16px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+.users .search button{
+  width: 47px;
+  height: 42px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #333;
+  cursor: pointer;
+  font-size: 17px;
+  border-radius: 0 5px 5px 0;
+}
+.user-list{
+  max-height: 350px;
+  overflow-y: auto;
+}
+.user-list::-webkit-scrollbar{
+  width: 0px;
+}
+.user-list a{
+  margin-bottom: 15px;
+  page-break-after: 10px;
+  padding-right: 15px;
+  border-bottom-color: #f1f1f1;
+}
+.user-list a:last-child{
+  border: none;
+  margin-bottom: 0px;
+}
+.user-list a .content img{
+  height: 40px;
+  width: 40px;
+}
+.user-list a .content p{
+  color: #67676a;
+}
+.user-list a .status-dot{
+  /* 상태점 */
+  font-size: 12px;
+  color: #468669;
+}
+/* We use this class name in php to show offline status */
+.user-list a .status-dot.offline{
+  color: #ccc;
 }
