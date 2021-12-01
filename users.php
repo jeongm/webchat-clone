@@ -1,22 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realtime chat App</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
-</head>
+<?php
+    session_start();
+    if(!isset($_SESSION['unique_id'])){
+        header("location: login.php");
+    }
+?>
+<!-- 이 헤드 태그 코드는 모든 PHP 파일에서 동일하므로 하나의 파일에 붙여넣고 해당 파일을 모든 PHP 파일에 포함합니다. -->
+<?php include_once "header.php";?> 
 <body>
     <div class="wrapper">
         <section class="users">
             <header>
+                <?php
+                    include_once "php/config.php";
+                    $sql = mysqli_query($conn,"SELECT * FROM users WHERE unique_id={$_SESSION['unique_id']}");
+                    if(mysqli_num_rows($sql) > 0) {
+                        $row = mysqli_fetch_assoc($sql);
+                    }
+                ?>
                 <div class="content">
-                    <img src="pimg.png" alt="">
+                    <img src="php/images/<?php echo $row['img'] ?>" alt="">
                     <div class="details">
-                        <span>Jeong</span>
-                        <p>Active now</p>
+                        <span><?php echo $row['uname'] ?></span>
+                        <p><?php echo $row['status'] ?></p>
                     </div>
                 </div>
                 <a href="#" class="logout">Logout</a>
@@ -27,66 +32,6 @@
                 <button><i class="fas fa-search"></i></button>
             </div>
             <div class="user-list">
-                <a href="#">
-                    <div class="content">
-                        <img src="pimg.png" alt="">
-                        <div class="details">
-                            <span>Jeong</span>
-                            <p>This is test message</p>
-                        </div>
-                    </div>
-                    <dif class="status-dot"><i class="fas fa-circle"></i></dif>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="pimg.png" alt="">
-                        <div class="details">
-                            <span>Jeong</span>
-                            <p>This is test message</p>
-                        </div>
-                    </div>
-                    <dif class="status-dot"><i class="fas fa-circle"></i></dif>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="pimg.png" alt="">
-                        <div class="details">
-                            <span>Jeong</span>
-                            <p>This is test message</p>
-                        </div>
-                    </div>
-                    <dif class="status-dot"><i class="fas fa-circle"></i></dif>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="pimg.png" alt="">
-                        <div class="details">
-                            <span>Jeong</span>
-                            <p>This is test message</p>
-                        </div>
-                    </div>
-                    <dif class="status-dot"><i class="fas fa-circle"></i></dif>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="pimg.png" alt="">
-                        <div class="details">
-                            <span>Jeong</span>
-                            <p>This is test message</p>
-                        </div>
-                    </div>
-                    <dif class="status-dot"><i class="fas fa-circle"></i></dif>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="pimg.png" alt="">
-                        <div class="details">
-                            <span>Jeong</span>
-                            <p>This is test message</p>
-                        </div>
-                    </div>
-                    <dif class="status-dot"><i class="fas fa-circle"></i></dif>
-                </a>
             </div>
         </section>
     </div>

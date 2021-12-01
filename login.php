@@ -1,37 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realtime chat App</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
-</head>
+<?php include_once "header.php";?>
 <body>
     <div class="wrapper">
         <section class="form login">
             <header>Realtime chat App</header>
             <form action="#">
-                <div class="error-txt">this is an error message!</div>
+                <div class="error-txt"></div>
                 <div class="field input">
-                    <label>UserID</label>
-                    <input type="text" placeholder="Enter your ID">
+                    <label>Email Address</label>
+                    <input type="text" name = "email" placeholder="Enter your email">
                 </div>
                 <div class="field input">
                     <label>Password</label>
-                    <input type="password" placeholder="Enter your Password">
+                    <input type="password" name="password" placeholder="Enter your Password">
                     <i class="fas fa-eye"></i>
                 </div>
                 <div class="field button">
-                    <input type="submit" value="LogIn">
+                    <input type="submit" value="로그인">
                 </div>
             </form>
-            <div class="link">Not yet signed up? <a href="#">Signup now</a></div>
+            <div class="link">아직 계정이 없으신가요? <a href="index.php">회원가입</a></div>
         </section>
     </div>
 
     <script src="javascript/pass-show-hide.js"></script>
+    <script src="javascript/login.js"></script>
     
 </body>
 </html>

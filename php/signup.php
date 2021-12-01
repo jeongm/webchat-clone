@@ -1,11 +1,11 @@
 <?php
     session_start(); //$_SESSION['unique_id'] = $row['unique_id']; 이부분?
     include_once "config.php"; // php 파일내용 포함시키기
-    $uid = mysqli_real_escape_string($conn, $_POST['uid']);
+    $uname = mysqli_real_escape_string($conn, $_POST['uname']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-    if(!empty($uid) && !empty($email) &&!empty($password)) {
+    if(!empty($uname) && !empty($email) &&!empty($password)) {
         //email이 유효한지 확인
         if(filter_var($email, FILTER_VALIDATE_EMAIL)){ 
             $sql = mysqli_query($conn, "SELECT email FROM users WHERE email = '{$email}'");//email가 이미 데이터베이스에 존재하는지 확인
@@ -14,7 +14,7 @@
             }else {
                 //사용자 업로드 파일을 확인
                 if(isset($_FILES['image'])){ //파일 업로드된 경우
-                    $img_name= $_FILES['image']['name'];//업로드한 이미지 파일 이름 가져오기
+                    $img_name= $_FILES['image']['uname'];//업로드한 이미지 파일 이름 가져오기
                     $tmp_name = $_FILES['image']['tmp_name']; //이 임시 이름은 폴더에 파일을 저장/이동하는 데 사용됨?
 
                     //이미지 파일 확장자 분해
@@ -34,8 +34,8 @@
                             $random_id = rand(time(), 100000000); // user에게 랜덤으로 id 생성해줌??? 왜??
 
                             // 모든 유저 데이터를 테이블에 삽입
-                            $sql2 = mysqli_query($conn ,"INSERT INTO users ( unique_id, uid, email, password, img, status)
-                                                VALUES ({$random_id}, '{$uid}','{$email}', '{$password}', '{$new_img_name}', '{$status}')");
+                            $sql2 = mysqli_query($conn ,"INSERT INTO users ( unique_id, uname, email, password, img, status)
+                                                VALUES ({$random_id}, '{$uname}','{$email}', '{$password}', '{$new_img_name}', '{$status}')");
                             if($sql2) { // 데이터 삽입되면
                                 $sql3 = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}'");
                                 if(mysqli_num_rows($sql3) > 0){

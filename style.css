@@ -285,21 +285,21 @@ body{
   color: #fff;
   border-radius: 18px 18px 0 18px;
 }
-.chat-box .incomming{
+.chat-box .incoming{
   display: flex;
   align-items: flex-end;
   /* flex-end 프로필 그림 위치 */
 }
-.chat-box .incomming img{
-  height: 35px;
-  width:35px;
+.chat-box .incoming img{
+  height: 40px;
+  width: 40px;
 }
-.incomming .details{
+.incoming .details{
   margin-left: 10px;
   margin-right: auto;
   max-width: calc(100% - 130px);
 }
-.incomming .details p{
+.incoming .details p{
   color: #333;
   background: #fff;
   border-radius: 18px 18px 18px 0px;
