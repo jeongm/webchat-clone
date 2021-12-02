@@ -29,12 +29,8 @@
             </div>
             <form action="#" class="typing-area" autocomplete="off">
                 <input type="text" name="outgoing_id" value="<?php echo $_SESSION['unique_id']; ?>" hidden > 
-<<<<<<< HEAD
                 <!-- unique_id가 난가?? 내가 전송자? msg_sender?-->
                 <input type="text" name="incoming_id" value="<?php echo $user_id; ?>" hidden >
-=======
-                <input type="text" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
->>>>>>> 0f11a7edebbf2bf5f3c84016bfdd8a1344070f0f
                 <!-- 첫 번째가 전송자(msg_sender_id), 두 번째가 수신자 (msg_receiver_id) -->
                 <input type="text" name="message" class="input-field" placeholder="메시지 입력">
                 <button><i class="fab fa-telegram-plane"></i></button>
