@@ -17,7 +17,11 @@
         (strlen($result) > 28) ? $msg=substr($result, 0, 30).'...' : $msg = $result;
         //($outgoing_id == $row2['outgoing_msg_id']) ? $you = "" : $you = "";
         //online인지 offline인지 확인
+<<<<<<< HEAD
         ($row['status'] == "오프라인") ? $offline = "오프라인" : $offline = "";
+=======
+        ($row['status'] == "Offline now") ? $offline = "offline" : $offline = "";
+>>>>>>> 0f11a7edebbf2bf5f3c84016bfdd8a1344070f0f
 
         $output .=  '<a href="chat.php?user_id='.$row['unique_id'].'">
                     <div class="content">

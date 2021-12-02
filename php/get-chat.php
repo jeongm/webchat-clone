@@ -7,7 +7,11 @@
         $output = "";
 
         $sql = "SELECT * FROM messages 
+<<<<<<< HEAD
                 LEFT JOIN users ON users.unique_id = messages.outgoing_msg_id
+=======
+                LEFT JOIN users ON users.unique_id = messages.incoming_msg_id
+>>>>>>> 0f11a7edebbf2bf5f3c84016bfdd8a1344070f0f
                 WHERE (outgoing_msg_id = {$outgoing_id} AND incoming_msg_id = {$incoming_id})
                 OR (outgoing_msg_id = {$incoming_id} AND incoming_msg_id = {$outgoing_id}) ORDER BY msg_id";
         $query = mysqli_query($conn, $sql);

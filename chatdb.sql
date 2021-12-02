@@ -16,7 +16,11 @@ ALTER TABLE `messages`
 
 
 -- Table structure for table `users`
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 0f11a7edebbf2bf5f3c84016bfdd8a1344070f0f
 CREATE TABLE `users` (
   `user_id` int(11) NOT NULL,
   `unique_id` int(255) NOT NULL,

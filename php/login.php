@@ -10,7 +10,11 @@
         $sql = mysqli_query($conn, "SELECT * FROM  users WHERE email = '{$email}' AND password = '{$password}'");
         if(mysqli_num_rows($sql) > 0){ // 사용자가 맞으면
             $row = mysqli_fetch_assoc($sql);
+<<<<<<< HEAD
             $status = "온라인";
+=======
+            $status = "Active now";
+>>>>>>> 0f11a7edebbf2bf5f3c84016bfdd8a1344070f0f
             $sql2 = mysqli_query($conn, "UPDATE users SET status = '{$status}' WHERE unique_id = {$row['unique_id']}");
             if($sql2){
                 $_SESSION['unique_id'] = $row['unique_id']; // 이 섹션을 사용하여 다른 php file에서 사용자 unique_id를 사용함 
