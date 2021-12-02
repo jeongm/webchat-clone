@@ -1,4 +1,6 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Poppins:wght@200&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
 /* 폰트 두 개 import 되어있음 */
 *{
   margin: 0;
@@ -6,6 +8,7 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
+  font-family: 'IBM Plex Sans KR', sans-serif;
 }
 body{
   display: flex;
@@ -32,6 +35,7 @@ body{
 .form header{
   font-size:  25px;
   font-weight: 600;
+  text-align: center;
   padding-bottom: 10px;
   border-bottom: 1px solid #e6e6e6;
 }
@@ -61,12 +65,12 @@ body{
 }
 .form form .input input{
   /* input이란 클래스의 input태그 */
-  height: 40px;
-  width: 100%;
-  font-size: 16px;
-  padding: 0 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border:none;
+  padding: 8px 0px;
+  font-size:15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease-in-out;
 }
 .form form .image input{
   font-size: 17px;
@@ -77,8 +81,8 @@ body{
   border: none;
   font-size: 17px;
   font-weight: 400;
-  background: rgb(66, 66, 66);
-  color: #fff;
+  background: rgb(245, 232, 113);
+  color: rgb(5, 5, 5);
   border-radius: 5px;
   cursor: pointer;
 }
@@ -86,7 +90,7 @@ body{
   position: absolute;
   right: 15px;
   color:#ccc;
-  top: 70%;
+  top: 55%;
   transform: translateY(-50%);
   cursor: pointer;
 }
@@ -99,7 +103,7 @@ body{
 .form .link{
   text-align: center;
   margin: 10px 0;
-  font-size: 17px;
+  font-size: 15px;
 }
 .form .link a{
   color: rgb(59, 62, 245);
@@ -148,10 +152,10 @@ body{
   font-weight: 700;
 }
 .users header .logout{
-  color: #fff;
+  color: rgb(5, 5, 5);
   font-size: 17px;
   padding: 7px 15px;
-  background: #333;
+  background: rgb(245, 232, 113);
   border-radius: 5px;
 }
 .users .search{
@@ -281,8 +285,8 @@ body{
   max-width: calc(100% - 130px);
 }
 .outgoing .details p{
-  background: #333;
-  color: #fff;
+  background: rgb(245, 232, 113);
+  color: rgb(5, 5, 5);
   border-radius: 18px 18px 0 18px;
 }
 .chat-box .incoming{
@@ -291,8 +295,8 @@ body{
   /* flex-end 프로필 그림 위치 */
 }
 .chat-box .incoming img{
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
 }
 .incoming .details{
   margin-left: 10px;
@@ -322,8 +326,10 @@ body{
   width: 55px;
   border: none;
   outline: none;
-  background: #333;
-  color: #fff;
+  background: rgb(245, 232, 113);
+  color: rgb(248, 245, 245);
+  /* background: #333;
+  color: #fff; */
   font-size: 19px;
   cursor: pointer;
   border-radius: 0 5px 5px 0;

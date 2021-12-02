@@ -14,7 +14,7 @@
             }else {
                 //사용자 업로드 파일을 확인
                 if(isset($_FILES['image'])){ //파일 업로드된 경우
-                    $img_name= $_FILES['image']['uname'];//업로드한 이미지 파일 이름 가져오기
+                    $img_name= $_FILES['image']['name'];//업로드한 이미지 파일 이름 가져오기
                     $tmp_name = $_FILES['image']['tmp_name']; //이 임시 이름은 폴더에 파일을 저장/이동하는 데 사용됨?
 
                     //이미지 파일 확장자 분해
@@ -30,7 +30,7 @@
                         $new_img_name = $time.$img_name;
 
                         if(move_uploaded_file($tmp_name, "images/". $new_img_name)) { //업로드한 이미지가 폴더로 성공적으로 이동하면
-                            $status = "Active now"; // 사용자가 가입하면 현재 상태 active now상태 됨)
+                            $status = "온라인"; // 사용자가 가입하면 현재 상태 active now상태 됨)
                             $random_id = rand(time(), 100000000); // user에게 랜덤으로 id 생성해줌??? 왜??
 
                             // 모든 유저 데이터를 테이블에 삽입
