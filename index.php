@@ -1,21 +1,28 @@
+<?php
+    session_start();
+    if(isset($_SESSION['unique_id'])){
+        header("location: users.php");
+    }
+?>
+
 <?php include_once "header.php";?>
 <body>
     <div class="wrapper">
         <section class="form signup">
-            <header>Realtime chat App</header>
+            <header>도란도란</header>
             <form action="#" enctype="multipart/form-data" autocomplete="off">
                 <div class="error-txt"></div>
                 <div class="field input">
-                    <label>User</label>
-                    <input type="text" name ="uname" placeholder="name" required>
+                    <label>이름</label>
+                    <input type="text" name ="uname" placeholder="이름을 입력하세요" required>
                 </div>
                 <div class="field input">
-                    <label>Email Address</label>
+                    <label>이메일</label>
                     <input type="text" name ="email" placeholder="Email@address" required>
                 </div>
                 <div class="field input">
-                    <label>Password</label>
-                    <input type="password" name ="password" placeholder="Password" required>
+                    <label>비밀번호</label>
+                    <input type="password" name ="password" placeholder="비밀번호를 입력하세요" required>
                     <i class="fas fa-eye"></i>
                 </div>
                 <div class="field image">

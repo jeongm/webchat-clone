@@ -14,7 +14,7 @@
             }else {
                 //사용자 업로드 파일을 확인
                 if(isset($_FILES['image'])){ //파일 업로드된 경우
-                    $img_name= $_FILES['image']['uname'];//업로드한 이미지 파일 이름 가져오기
+                    $img_name= $_FILES['image']['name'];//업로드한 이미지 파일 이름 가져오기
                     $tmp_name = $_FILES['image']['tmp_name']; //이 임시 이름은 폴더에 파일을 저장/이동하는 데 사용됨?
 
                     //이미지 파일 확장자 분해
