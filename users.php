@@ -24,7 +24,10 @@
                         <p><?php echo $row['status'] ?></p>
                     </div>
                 </div>
-                <a href="php/logout.php?logout_id=<?php echo $row['unique_id'] ?>" class="logout">로그아웃</a>
+                <div class="menu">
+                    <a href="group-chat.php" class="groupent">단체채팅</a>
+                    <a href="php/logout.php?logout_id=<?php echo $row['unique_id'] ?>" class="logout">로그아웃</a>
+                </div>
             </header>
             <div class="search">
                 <span class="text">채팅할 친구를 선택하세요</span>

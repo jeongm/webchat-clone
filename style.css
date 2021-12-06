@@ -151,12 +151,17 @@ body{
   font-size: 18px;
   font-weight: 700;
 }
-.users header .logout{
+.users header .menu a{
   color: rgb(5, 5, 5);
   font-size: 17px;
   padding: 7px 15px;
-  background: rgb(245, 232, 113);
   border-radius: 5px;
+}
+.users header .groupent{
+  border: 1px solid rgb(94, 93, 93);
+}
+.users header .logout{
+  background: rgb(245, 232, 113);
 }
 .users .search{
   margin: 20px 0;
