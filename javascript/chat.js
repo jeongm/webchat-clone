@@ -54,7 +54,7 @@ setInterval(()=> {
     // we have to send the form data through ajax to php (양식 데이터를 ajax를 통해 php로 보내야 함??)
     let formData = new FormData(form); // creating new formData object
     xhr.send(formData); // sending the form data to php
-}, 500); //0.5초 주기로 실행됨
+}, 400); //0.5초 주기로 실행됨
 
 function scrollToBottom(){
     chatBox.scrollTop = chatBox.scrollHeight;

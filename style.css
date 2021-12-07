@@ -289,7 +289,14 @@ body{
   margin-left: auto;
   max-width: calc(100% - 130px);
 }
+<<<<<<< HEAD
 /* .outgoing .details p{
+=======
+.outgoing .details div{
+  float: left;
+}
+.outgoing .details .msg{
+>>>>>>> 0c96e51f6cfd9a964ada85b43954f560ee26ecfd
   background: rgb(245, 232, 113);
   color: rgb(5, 5, 5);
   border-radius: 18px 18px 0 18px;
@@ -312,6 +319,17 @@ body{
 .outgoing .details:hover .time{
   color: #333;
 }
+.outgoing .details .time{
+  margin: 0px;
+  color: #f7f7f7;
+  clear:left;
+  font-size: 12px;
+  
+}
+.outgoing .details:hover .time{
+  color: #333;
+}
+
 .chat-box .incoming{
   display: flex;
   align-items: flex-end;
@@ -326,7 +344,14 @@ body{
   margin-right: auto;
   max-width: calc(100% - 130px);
 }
+<<<<<<< HEAD
 /* .incoming .details p{
+=======
+.incoming .details div{
+  float: left;
+}
+.incoming .details .msg{
+>>>>>>> 0c96e51f6cfd9a964ada85b43954f560ee26ecfd
   color: #333;
   background: #fff;
   border-radius: 18px 18px 18px 0px;
@@ -338,6 +363,13 @@ body{
   color: #333;
   background: #fff;
   border-radius: 18px 18px 18px 0px;
+}
+.incoming .details .time{
+  color: #f7f7f7;
+  font-size: 12px;
+}
+.incoming .details:hover .time{
+  color: #333;
 }
 .incoming .details .time{
   color: #f7f7f7;
