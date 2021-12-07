@@ -18,7 +18,7 @@
                     }
                 ?>
                 <a href="users.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
-                <img src="chatting-64.png" alt="">
+                <img src="chatting.png" alt="">
                 <div class="details">
                     <span>단체채팅</span>
                 </div>

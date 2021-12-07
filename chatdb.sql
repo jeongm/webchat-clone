@@ -11,7 +11,7 @@ CREATE TABLE `messages` (
   `incoming_msg_id` int(255) NOT NULL,
   `outgoing_msg_id` int(255) NOT NULL,
   `msg` varchar(1000) NOT NULL,
-  `date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `msg_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Table structure for table `users`
@@ -39,10 +39,10 @@ ALTER TABLE `users`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
-  CREATE TABLE `chat`.`group` ( 
+  CREATE TABLE `chat`.`groupmsg` ( 
     `group_msg_id` INT(200) NOT NULL AUTO_INCREMENT , 
     `unique_id` INT(200) NOT NULL , 
     `msg` VARCHAR(1000) NOT NULL , 
-    `date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+    `msg_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
     PRIMARY KEY (`group_msg_id`)
     ) ENGINE = InnoDB;

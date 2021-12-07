@@ -241,7 +241,7 @@ body{
   color: #468669;
 }
 /* We use this class name in php to show offline status */
-.user-list a .status-dot.offline{
+.user-list a .status-dot.오프라인{
   color: #ccc;
 }
 
@@ -289,10 +289,28 @@ body{
   margin-left: auto;
   max-width: calc(100% - 130px);
 }
-.outgoing .details p{
+/* .outgoing .details p{
   background: rgb(245, 232, 113);
   color: rgb(5, 5, 5);
   border-radius: 18px 18px 0 18px;
+} */
+.outgoing .details div{
+  float: left;
+}
+.outgoing .details .msg{
+  background: rgb(245, 232, 113);
+  color: rgb(5, 5, 5);
+  border-radius: 18px 18px 0 18px;
+}
+.outgoing .details .time{
+  margin: 0px;
+  color: #f7f7f7;
+  clear:left;
+  font-size: 12px;
+  
+}
+.outgoing .details:hover .time{
+  color: #333;
 }
 .chat-box .incoming{
   display: flex;
@@ -308,10 +326,25 @@ body{
   margin-right: auto;
   max-width: calc(100% - 130px);
 }
-.incoming .details p{
+/* .incoming .details p{
   color: #333;
   background: #fff;
   border-radius: 18px 18px 18px 0px;
+} */
+.incoming .details div{
+  float: left;
+}
+.incoming .details .msg{
+  color: #333;
+  background: #fff;
+  border-radius: 18px 18px 18px 0px;
+}
+.incoming .details .time{
+  color: #f7f7f7;
+  font-size: 12px;
+}
+.incoming .details:hover .time{
+  color: #333;
 }
 .chat-area .typing-area{
   padding: 18px 30px;
