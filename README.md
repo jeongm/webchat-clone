@@ -12,11 +12,8 @@ https://www.youtube.com/watch?v=VnvzxGWiK54&t=6601s
 - UI변경
 - 그룹채팅방 만듦
 
-### 로그인
-![](./php/images/login.png)
-
-### 회원가입
-![](./php/images/signup.png)
+### 회원가입 & 로그인
+![](./php/images/signup.png) ![](./php/images/login.png) 
 
 ### 사람 목록
 ![](./php/images/list.png)
