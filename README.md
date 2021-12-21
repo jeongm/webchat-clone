@@ -10,7 +10,7 @@ https://www.youtube.com/watch?v=VnvzxGWiK54&t=6601s
 - html/css
 - php
 
-### 추가
+### ㅂㅕㄴㄱㅕㅇㅅㅏㅎㅏㅇ
 - UI변경
 - 그룹채팅방 만듦
 
